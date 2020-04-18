@@ -1,26 +1,10 @@
-import { CHANGE_INPUT_VALUE,ADD_LIST_VALUE,DEL_LIST_VALUE } from './actionType';
-const defaultState = {
-  inputValue: '',
-  list: []
-}
-export default (state=defaultState, action) => {
-  if(action.type === CHANGE_INPUT_VALUE) {
-    const newState = JSON.parse(JSON.stringify(state));
-    newState.inputValue = action.value;
-    return newState;
-  }
-  if(action.type === ADD_LIST_VALUE) {
-    const newState = JSON.parse(JSON.stringify(state));
-    newState.list.push(newState.inputValue);
-    newState.inputValue = '';
-    return newState;
-  }
-  if(action.type === DEL_LIST_VALUE) {
-    const newState = JSON.parse(JSON.stringify(state));
-    newState.list.splice(action.index,1);
-    return newState;
-  }
+//在redux中引入combineReducers对不同文件中的reducer进行集中管理
+import { combineReducers } from 'redux';
+//直接引入reducer对应的文件就可以，在对应的文件中的index文件会引入自己的reducer并且导出，为了避免与主文件的reducer名字冲突，这里可以直接使用as做重命名
+import {reducer as headerReducer } from '../common/header/store';
 
-  return state
-}
+const reducer = combineReducers({
+  header: headerReducer
+});
 
+export default reducer;
