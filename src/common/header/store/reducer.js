@@ -1,18 +1,17 @@
 import * as actionType from './actionType';
-const initState = ({
+import { fromJS } from 'immutable';
+const initState = fromJS({
   focused: false
 })
 
 export default (state = initState, action) => {
-  const newState = JSON.parse(JSON.stringify(state));
   switch (action.type) {
     case actionType.CHANGE_INPUT_FOCUS:
-      newState.focused = true;
-      return newState;
+      return state.set('focused', true)
     case actionType.CHANGE_INPUT_BLUR:
-      newState.focused = false;
-      return newState;
-
+      return state.set('focused', false)
+    case actionType.INIT_LIST:
+      return state.set('list', action.data);
 
     default: return state;
   }
