@@ -48,7 +48,7 @@ export const InnerItem = styled.div`
 export const SearchWrapper = styled.div`
   position: relative;
   float: left;
-  .iconfont {
+  .zoom {
     position: absolute;
     right: 5px;
     bottom: 5px;
@@ -76,13 +76,26 @@ export const SearchInfoTitle = styled.div`
   color: #969696;
 `;
 export const SearchInfoSwitch = styled.span`
+  cursor: pointer;
   float: right;
   font-size: 13px;
+  .switchicon{
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin-right: 2px;
+    transition: all .2s ease;
+    transform-origin: center center;
+  }
+  &:hover{
+    color: #333;
+  }
 `;
 export const SearchInfoList = styled.div`
   overflow: hidden;
 `;
 export const SearchInfoItem = styled.a`
+  cursor: pointer;
   display: block;
   float: left;
   line-height: 20px;
@@ -92,6 +105,9 @@ export const SearchInfoItem = styled.a`
   border: 1px solid #ccc;
   color: #787878;
   border-radius: 3px;
+  &:hover{
+    color: #333;
+  }
 `;
 export const InnerInput = styled.input.attrs({
   placeholder: '搜索'

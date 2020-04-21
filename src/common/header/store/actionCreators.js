@@ -5,7 +5,8 @@ import { fromJS } from 'immutable';
 const initList = (data) => ({
   type: actionType.INIT_LIST,
   //这里需要转成immutable对象，因为在reducer中原始数组被转为immutable对象
-  data: fromJS(data)
+  data: fromJS(data),
+  totalPage: Math.ceil((data.length) / 10)
 });
 export const searchFocus = () => ({
   type: actionType.CHANGE_INPUT_FOCUS
@@ -26,3 +27,17 @@ export const getList = () => {
     })
   }
 };
+export const mouseEnter = () => ({
+  type: actionType.MOUSE_ENTER
+});
+export const mouseLeave = () => ({
+  type: actionType.MOUSE_LEAVE
+});
+export const replacePage = (page) => ({
+  type: actionType.CHANGE_PAGE,
+  page
+});
+export const changeValue = (value) => ({
+  type: actionType.CHANGE_VALUE,
+  value
+});

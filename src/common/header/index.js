@@ -10,21 +10,31 @@ import { actionCreators } from './store';
 
 class Header extends Component {
   getListArea() {
-    const { focused, list } = this.props;
-    if (focused) {
+    const { focused, list, page, mouseenter, mouseleave, mouse, replacepage, totalPage, clickvalue } = this.props;
+    const newList = list.toJS()
+    const pageList = []
+    if(newList.length) {
+      for (let i = (page - 1) * 10; i < page * 10; i++) {
+        pageList.push(
+          <SearchInfoItem onClick={() => clickvalue(newList[i])} key={newList[i]}>{newList[i]}</SearchInfoItem>
+        )
+      }
+    }
+    if (focused || mouse) {
       return (
-        <SearchInfo>
+        <SearchInfo
+          onMouseEnter={mouseenter}
+          onMouseLeave={mouseleave}
+        >
           <SearchInfoTitle>
             热门搜索
-          <SearchInfoSwitch>换一批</SearchInfoSwitch>
+          <SearchInfoSwitch onClick={() =>replacepage(page, totalPage,this.Icon)}>
+            <span ref={(icon) => {this.Icon = icon}} className='iconfont switchicon'>&#xe857;</span>
+            换一批
+          </SearchInfoSwitch>
           </SearchInfoTitle>
           <SearchInfoList>
-            {
-              //这里需要对数组加空值兼容，会调用两次，可以console测试
-              (list || []).map((item) => {
-                return <SearchInfoItem key={item}>{item}</SearchInfoItem>
-              })
-            }
+            {pageList}
           </SearchInfoList>
         </SearchInfo>
       )
@@ -34,7 +44,7 @@ class Header extends Component {
   }
 
   render() {
-    const { focused, handInputFocus, handInputBlur } = this.props;
+    const { focused, handInputFocus, handInputBlur, list, inputValue, changevalue } = this.props;
     return (
       <Nav>
         <HeaderWrapper>
@@ -59,14 +69,14 @@ class Header extends Component {
                 classNames="slide"
               >
                 <InnerInput className={focused ? 'focused' : ''}
-                  onFocus={handInputFocus}
+                  value={inputValue}
+                  onChange={changevalue}
+                  onFocus={() => handInputFocus(list)}
                   onBlur={handInputBlur}
                 ></InnerInput>
               </CSSTransition>
-              <span className={focused ? 'iconfont focused' : 'iconfont'}>&#xe653;</span>
-              {
-                this.getListArea()
-              }
+              <span className={focused ? 'iconfont focused zoom' : 'iconfont zoom'}>&#xe653;</span>
+              {this.getListArea()}
             </SearchWrapper>
           </HeaderInner>
           <Addition>
@@ -80,25 +90,53 @@ class Header extends Component {
       </Nav>
     )
   }
-
-
 }
 
 const mapStoreToProps = (state) => {
   return {
+    inputValue: state.getIn(['header', 'inputValue']),
     focused: state.getIn(['header', 'focused']),
     // focused: state.get('header').get('focused')
-    list: state.getIn(['header', 'list'])
+    list: state.getIn(['header', 'list']),
+    page: state.getIn(['header', 'page']),
+    totalPage: state.getIn(['header', 'totalPage']),
+    mouse: state.getIn(['header', 'mouse'])
   }
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    handInputFocus() {
-      dispatch(actionCreators.getList());
+    handInputFocus(list) {
+      (list.size === 0) && dispatch(actionCreators.getList());
       dispatch(actionCreators.searchFocus());
     },
     handInputBlur() {
       dispatch(actionCreators.searchBlur());
+    },
+    mouseenter() {
+      dispatch(actionCreators.mouseEnter())
+    },
+    mouseleave() {
+      dispatch(actionCreators.mouseLeave())
+    },
+    replacepage(page, totalPage,icon) {
+      let originAngle = icon.style.transform.replace(/[^0-9]/ig, '');
+      if(originAngle){
+        originAngle = parseInt(originAngle, 10)
+      }else {
+        originAngle = 0;
+      }
+      icon.style.transform = `rotate(${originAngle + 360}deg)`
+      if(page < totalPage) {
+        dispatch(actionCreators.replacePage(page + 1))
+      }else {
+        dispatch(actionCreators.replacePage(1))
+      }
+    },
+    clickvalue(value) {
+      dispatch(actionCreators.changeValue(value));
+    },
+    changevalue(event) {
+      dispatch(actionCreators.changeValue(event.target.value));
     }
   }
 }
