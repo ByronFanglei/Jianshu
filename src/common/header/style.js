@@ -14,9 +14,7 @@ export const HeaderWrapper = styled.div`
   margin: 0 auto;
 `;
 //可以在这里直接对标签进行属性的设置
-export const Logo = styled.a.attrs({
-  href: '/'
-})`
+export const Logo = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -68,6 +66,7 @@ export const SearchInfo = styled.div`
   width: 240px;
   padding: 0 20px;
   box-shadow: 0 0 8px rgba(0,0,0,.2);
+  background: #fff;
 `;
 export const SearchInfoTitle = styled.div`
   margin: 20px 0 15px 0;
@@ -114,7 +113,7 @@ export const InnerInput = styled.input.attrs({
 })`
   width: 240px;
   height: 38px;
-  padding 0 35px 0 20px;
+  padding: 0 35px 0 20px;
   box-sizing: border-box;
   margin: 9px 0 0 20px;
   font-size: 15px;
@@ -162,4 +161,4 @@ export const Button = styled.div`
     color: #fff;
     background: #ec6149;
   }
-`
+`;
