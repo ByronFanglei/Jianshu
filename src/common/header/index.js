@@ -7,13 +7,14 @@ import {
 import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
   getListArea() {
     const { focused, list, page, mouseenter, mouseleave, mouse, replacepage, totalPage, clickvalue } = this.props;
     const newList = list.toJS()
     const pageList = []
-    if(newList.length) {
+    if (newList.length) {
       for (let i = (page - 1) * 10; i < page * 10; i++) {
         pageList.push(
           <SearchInfoItem onClick={() => clickvalue(newList[i])} key={newList[i]}>{newList[i]}</SearchInfoItem>
@@ -28,8 +29,8 @@ class Header extends Component {
         >
           <SearchInfoTitle>
             热门搜索
-          <SearchInfoSwitch onClick={() =>replacepage(page, totalPage,this.Icon)}>
-            <span ref={(icon) => {this.Icon = icon}} className='iconfont switchicon'>&#xe857;</span>
+          <SearchInfoSwitch onClick={() => replacepage(page, totalPage, this.Icon)}>
+              <span ref={(icon) => { this.Icon = icon }} className='iconfont switchicon'>&#xe857;</span>
             换一批
           </SearchInfoSwitch>
           </SearchInfoTitle>
@@ -48,7 +49,9 @@ class Header extends Component {
     return (
       <Nav>
         <HeaderWrapper>
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
           <HeaderInner>
             <InnerItem className="left action">
               <span className="iconfont">&#xe711;</span>
@@ -118,17 +121,17 @@ const mapDispatchToProps = (dispatch) => {
     mouseleave() {
       dispatch(actionCreators.mouseLeave())
     },
-    replacepage(page, totalPage,icon) {
+    replacepage(page, totalPage, icon) {
       let originAngle = icon.style.transform.replace(/[^0-9]/ig, '');
-      if(originAngle){
+      if (originAngle) {
         originAngle = parseInt(originAngle, 10)
-      }else {
+      } else {
         originAngle = 0;
       }
       icon.style.transform = `rotate(${originAngle + 360}deg)`
-      if(page < totalPage) {
+      if (page < totalPage) {
         dispatch(actionCreators.replacePage(page + 1))
-      }else {
+      } else {
         dispatch(actionCreators.replacePage(1))
       }
     },
