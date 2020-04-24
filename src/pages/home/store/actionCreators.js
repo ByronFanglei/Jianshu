@@ -14,12 +14,8 @@ const initHomeData = (data) => ({
   Recom: fromJS(data.Recom),
   User: fromJS(data.User),
   articleList: fromJS(data.articleList),
-<<<<<<< HEAD
   topicList: fromJS(data.topicList),
   writetotalpage: Math.ceil((data.User.length) / 5)
-=======
-  topicList: fromJS(data.topicList)
->>>>>>> aa800f881cd328439bc6da2b7047067c0e97dc29
 });
 export const getHomeData = () => {
   return (dispatch) => {
@@ -50,7 +46,6 @@ export const getMoreList = (artpage) => {
 export const changeistop = (show) => ({
   type: actionType.CHANGE_IS_TOP,
   show
-<<<<<<< HEAD
 });
 export const changeWriteSwitch = (show) => ({
   type: actionType.CHANGE_WRITE_SWITCH,
@@ -60,6 +55,3 @@ export const replacePageWrite = (writepage) => ({
   type: actionType.CHANGE_PAGE_WRITE,
   writepage
 });
-=======
-})
->>>>>>> aa800f881cd328439bc6da2b7047067c0e97dc29

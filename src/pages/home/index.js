@@ -9,11 +9,7 @@ import { connect } from 'react-redux';
 import { actionCreators } from './store';
 
 class Home extends PureComponent {
-<<<<<<< HEAD
   //跳转页面最上层
-=======
-
->>>>>>> aa800f881cd328439bc6da2b7047067c0e97dc29
   handScrollTop() {
     window.scrollTo(0, 0);
   }

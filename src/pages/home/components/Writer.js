@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { WriterWrapper, WriterTitle, WriterItem, WriterFind } from '../style';
 import { connect } from 'react-redux';
-<<<<<<< HEAD
 import { actionCreators } from '../store';
 import { CSSTransition } from 'react-transition-group'
 
@@ -56,41 +55,14 @@ class Writer extends PureComponent {
   }
 
   render() {
-=======
-
-class Writer extends PureComponent {
-
-  render() {
-    const { list } = this.props;
->>>>>>> aa800f881cd328439bc6da2b7047067c0e97dc29
     return (
       <WriterWrapper>
         <WriterTitle>
           <span className="recom">推荐作者</span>
-<<<<<<< HEAD
           {this.getSwitchWrite()}
         </WriterTitle>
         <div>
           {this.getWriteList()}
-=======
-          <span className="switch"><span className='iconfont'>&#xe857;</span>换一批</span>
-        </WriterTitle>
-        <div>
-          {
-            list.map((item) => (
-              <WriterItem key={item.get('id')}>
-                <img className="writeimg" src={item.get('avatar_source')} alt=""></img>
-                <div className="writediv">
-                  <p className="divtitle">{item.get('nickname')}</p>
-            <p className="divinfo">写了{item.get('total_wordage')}字 - {item.get('total_likes_count')}喜欢</p>
-                </div>
-                <div className="writetext">
-                  +关注
-            </div>
-              </WriterItem>
-            ))
-          }
->>>>>>> aa800f881cd328439bc6da2b7047067c0e97dc29
         </div>
         <WriterFind>
           查看全部 &gt;
@@ -101,7 +73,6 @@ class Writer extends PureComponent {
 }
 
 const mapState = (state) => ({
-<<<<<<< HEAD
   User: state.getIn(['home', 'User']),
   writepage: state.getIn(['home', 'writepage']),
   writetotalpage: state.getIn(['home', 'writetotalpage']),
@@ -125,11 +96,3 @@ const mapProps = (dispatch) => {
 }
 
 export default connect(mapState, mapProps)(Writer);
-=======
-  list: state.getIn(['home', 'User']),
-  page: state.getIn(['home', 'page']),
-  total: state.getIn(['home', 'total'])
-})
-
-export default connect(mapState, null)(Writer);
->>>>>>> aa800f881cd328439bc6da2b7047067c0e97dc29
