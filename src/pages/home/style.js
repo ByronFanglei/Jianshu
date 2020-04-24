@@ -172,13 +172,17 @@ export const WriterWrapper = styled.div`
 export const WriterTitle = styled.div`
   overflow: hidden;
   width: 100%;
+<<<<<<< HEAD
   cursor: pointer;
+=======
+>>>>>>> aa800f881cd328439bc6da2b7047067c0e97dc29
   >span{
     color: #969696;
     font-size: 14px;
   }
   .switch{
     float: right;
+<<<<<<< HEAD
     &:hover{
       color: #ff6700;
     }
@@ -194,6 +198,8 @@ export const WriterTitle = styled.div`
       transition: all .5s ease;
       transform-origin: center center;
     }
+=======
+>>>>>>> aa800f881cd328439bc6da2b7047067c0e97dc29
   }
 `;
 export const WriterItem = styled.div`

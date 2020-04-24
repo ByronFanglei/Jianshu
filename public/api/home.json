@@ -146,6 +146,7 @@
 				"nickname": "只有一半影子的人",
 				"total_likes_count": 876,
 				"total_wordage": 423
+<<<<<<< HEAD
 			},
 			{
 				"id": 8,
@@ -188,6 +189,8 @@
 				"nickname": "没文化的野狐狸",
 				"total_likes_count": 754,
 				"total_wordage": 876
+=======
+>>>>>>> aa800f881cd328439bc6da2b7047067c0e97dc29
 			}
 		]
 	}
