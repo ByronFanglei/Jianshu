@@ -1,0 +1,1 @@
+export const UPDATA_ID_DATA = 'UPDATA_ID_DATA';

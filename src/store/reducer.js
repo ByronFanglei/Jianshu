@@ -3,10 +3,12 @@ import { combineReducers } from 'redux-immutable';
 //直接引入reducer对应的文件就可以，在对应的文件中的index文件会引入自己的reducer并且导出，为了避免与主文件的reducer名字冲突，这里可以直接使用as做重命名
 import {reducer as headerReducer } from '../common/header/store';
 import {reducer as homeReducer } from '../pages/home/store'
+import {reducer as detailReducer } from '../pages/detail/store';
 
 const reducer = combineReducers({
   header: headerReducer,
-  home: homeReducer
+  home: homeReducer,
+  detail: detailReducer
 });
 
 export default reducer;

@@ -1,7 +1,117 @@
 {
 	"success": true,
 	"data": {
-		"title": "衡水中学，被外地人占领的高考工厂",
-		"content": "<img src='//upload-images.jianshu.io/upload_images/10295326-b7d6641a66c7fafc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/524'/><p><b>2017年，衡水中学考上清华北大的人数是176人</b>，2016年是139人，再往前推到2015年，这个人数是119人。但是在这些辉煌的名单背后，却是外地来衡水上学人数暴涨，本地人上好高中越来越艰难的尴尬处境。</p><p>2017年，衡水中学考上清华北大的人数是176人，2016年是139人，再往前推到2015年，这个人数是119人。但是在这些辉煌的名单背后，却是外地来衡水上学人数暴涨，本地人上好高中越来越艰难的尴尬处境。</p><p>2017年，衡水中学考上清华北大的人数是176人，2016年是139人，再往前推到2015年，这个人数是119人。但是在这些辉煌的名单背后，却是外地来衡水上学人数暴涨，本地人上好高中越来越艰难的尴尬处境。</p><p>2017年，衡水中学考上清华北大的人数是176人，2016年是139人，再往前推到2015年，这个人数是119人。但是在这些辉煌的名单背后，却是外地来衡水上学人数暴涨，本地人上好高中越来越艰难的尴尬处境。</p>"
+		"article": [
+			{
+				"id": 1,
+				"title": "细读《挪威的森林》",
+				"AuthorImg": "https://upload.jianshu.io/users/upload_avatars/15517692/4fcf01a5-410e-407f-bde7-fd48159db72f.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
+				"AuthorName": "MR_TS",
+				"AuthorUpData": "2020.03.13 21:44:20",
+				"AuthorWords": "2,305",
+				"AuthorRead": "36,972",
+				"ContentImg": "https://upload-images.jianshu.io/upload_images/15517692-7a1b517edb1eff6d.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp",
+				"ContenOne": "《挪威的森林》，村上春树的代表作。因它的名气特别响亮，特定网购了一本，放在书架上放好几个月了，最近才有时间打开阅读。",
+				"ContenTwo": "花了六天时间读完，基本上是小半天小半天的样子下看完的，算是细读些了。小说我是很少会细读的，基本是凭语感一气而下，遇到生字或不通顺也不停顿，其实个别地方跳过一般也不影响对小说主旨的把握。",
+				"ContenThree": "小说主人翁叫“渡边君”，故事围绕他的中学生活到大学生活的描写，重点写他青春里的感情生活，又或者说爱情吧。其他的主人翁分别有中学时的朋友：木月、直子（女），大学认识的朋友：绿子（女）、永泽、室友“敢死队（记不起叫啥了）”、初美（永泽女友），包括直子疗养院的室友：玲子（女）",
+				"ContenFour": "以心相交的好友木月中学时自杀了。渡边一下子失去了能谈心的伙伴，后面选择离家很远没有人认识的地方读大学，也想重新开始自己的人生。本来单调乏味的大学生活他一直无感的持续着，在地铁上再次遇到好友木月的女朋友直子，让渡边的生活发生了大的变化，并在种种纠结中同直子自然而然的睡了，可心理又总觉得愧疚于木月...",
+				"BookName": "《挪威的森林》后面简称《挪》"
+			},
+			{
+				"id": 2,
+				"title": "希望有一个人，能听懂你的弦外之音",
+				"AuthorImg": "https://upload.jianshu.io/users/upload_avatars/13484697/49dae0b9-40fb-4481-81f9-c9590f953e1b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
+				"AuthorName": "满分激光枪",
+				"AuthorUpData": "2020.04.10 17:09:30",
+				"AuthorWords": "5,305",
+				"AuthorRead": "3,972",
+				"ContentImg": "https://upload-images.jianshu.io/upload_images/4741933-77158752df1b1c2b.jpeg?imageMogr2/auto-orient/strip|imageView2/2/w/600/format/webp",
+				"ContenOne": "有天晚上，一个哥们来找我喝酒，在夜市摊两杯白酒下肚，他就开始诉苦。",
+				"ContenTwo": "首先他说了他的经济问题，工资一年多没涨了，还房贷越来越紧张，老婆脾气越来越大，隔三差五的和他妈展开对骂…",
+				"ContenThree": "接着我们又聊起来上学时的情形，半夜一起偷偷去吃烧烤...",
+				"ContenFour": "末了，他感叹说：那时是真穷啊，吃包1块钱的泡面都是香的。...",
+				"BookName": "《挪威的森林》"
+			}
+		],
+		"write": [
+			{
+				"id": 1,
+				"WriteName": "MR_TS",
+				"WriteImg": "https://upload.jianshu.io/users/upload_avatars/15517692/4fcf01a5-410e-407f-bde7-fd48159db72f.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
+				"WriteTotalPrice": 20,
+				"WritePrice": 0.09,
+				"WriteContent": [
+					{
+						"title": "细读《挪威的森林》",
+						"read": "阅读 36,964"
+					},
+					{
+						"title": "阅读是一件乏味甚至艰苦的事情",
+						"read": "阅读 6,964"
+					},
+					{
+						"title": "梁淑溟《人生与人心》道德篇",
+						"read": "阅读 964"
+					},
+					{
+						"title": "重写《乌合之众》笔记9",
+						"read": "阅读 36"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"WriteName": "满分激光枪",
+				"WriteImg": "https://upload.jianshu.io/users/upload_avatars/13484697/49dae0b9-40fb-4481-81f9-c9590f953e1b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/90/h/90/format/webp",
+				"WriteTotalPrice": 996,
+				"WritePrice": 81.01,
+				"WriteContent": [
+					{
+						"title": "希望有一个人，能听懂你的弦外之音",
+						"read": "阅读 16,964"
+					},
+					{
+						"title": "人到中年，少走三种亲戚，多交三种朋友",
+						"read": "阅读 464"
+					},
+					{
+						"title": "27岁小伙撞伤老人，在医院跳楼自杀：你没穷过，你真的不懂",
+						"read": "阅读 864"
+					}
+				]
+			}
+		],
+		"Recom": [
+			{
+				"id": 1,
+				"RecomContent": [
+					{
+						"title": "每日一笑",
+						"read": "阅读 11,638"
+					},
+					{
+						"title": "跟钢铁直男相处是什么体验？",
+						"read": "阅读 111"
+					},
+					{
+						"title": "温柔入骨的仙句",
+						"read": "阅读 100"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"RecomContent": [
+					{
+						"title": "你知道爱和喜欢的区别吗？",
+						"read": "阅读 31,638"
+					},
+					{
+						"title": "还花呗",
+						"read": "阅读 99"
+					}
+				]
+			}
+		]
 	}
 }

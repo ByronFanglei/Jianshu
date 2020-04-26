@@ -85,6 +85,9 @@ export const LoadMore = styled.div`
   border-radius: 20px;
   color: #fff;
   cursor: pointer;
+  &:hover{
+    background: #9b9b9b;
+  }
 `;
 export const RecomWrapper = styled.div`
   width: 280px;
