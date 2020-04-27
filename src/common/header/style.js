@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import logoPng from '../../statics/logo.png';
 //设置自定义组件Nav拥有div属性并赋予对应css属性
 export const Nav = styled.div`
+  z-index: 0;
   height: 56px;
   border-bottom: 1px solid #f0f0f0;
 `;
@@ -33,6 +34,7 @@ export const InnerItem = styled.div`
   padding: 0 15px;
   font-size: 17px;
   color: #333;
+  cursor: pointer;
   &.left{
     float: left;
   }
