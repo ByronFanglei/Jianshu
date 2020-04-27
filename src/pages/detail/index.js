@@ -1,4 +1,5 @@
 import React,{ useEffect, memo } from 'react';
+import { withRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { DetailWrapper, DetailLeft, DetailWrite, DetailRecom } from './style';
 import Write from './components/Write';
@@ -29,4 +30,4 @@ const Detail = memo((props) => {
     </DetailWrapper>
   )
 })
-export default Detail;
+export default withRouter(Detail);

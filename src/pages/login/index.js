@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, withRouter } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { LoginWrapper, LoginTitle } from './style';
 import { Input, Button, Form } from 'antd';
@@ -85,4 +85,4 @@ const Login = () => {
 
 }
 
-export default Login;
+export default withRouter(Login);

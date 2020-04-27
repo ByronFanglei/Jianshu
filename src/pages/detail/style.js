@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const DetailWrapper = styled.div`
-  width: 1000px;
+  width: 1010px;
   margin: 0 auto;
   padding: 10px 16px 0;
 `;
@@ -13,15 +13,15 @@ export const DetailLeft = styled.div`
   box-sizing: border-box;
 `;
 export const DetailWrite = styled.div`
+  width: 260px;
   overflow: hidden;
-  width: 276px;
   float: right;
   background: #fafafa;
   padding: 16px;
   box-sizing: border-box;
 `;
 export const DetailRecom = styled.div`
-  width: 276px;
+  width: 260px;
   float: right;
   background: #fafafa;
   padding: 16px;

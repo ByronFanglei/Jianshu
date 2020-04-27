@@ -6,8 +6,8 @@ import { GlobalIcon } from './statics/iconfont/iconfont';
 import Header from './common/header';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './pages/home';
-import Detail from './pages/detail';
-import Login from './pages/login';
+import Detail from './pages/detail/loadable';
+import Login from './pages/login/loadable';
 import 'antd/dist/antd.css';
 
 class App extends Component {
