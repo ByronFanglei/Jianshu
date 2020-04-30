@@ -64,7 +64,8 @@ class Header extends Component {
             </InnerItem>
             {
               login ?
-                <InnerItem onClick={loginOut} className="right">退出</InnerItem> :
+                <InnerItem onClick={loginOut} className="right">退出</InnerItem>
+                :
                 <Link to="/login">
                   <InnerItem className="right">登录</InnerItem>
                 </Link>
@@ -91,10 +92,12 @@ class Header extends Component {
             </SearchWrapper>
           </HeaderInner>
           <Addition>
-            <Button className="writing">
-              <span className="iconfont">&#xe6e5;</span>
+            <Link to="/write">
+              <Button className="writing">
+                <span className="iconfont">&#xe6e5;</span>
                 写文章
-            </Button>
+              </Button>
+            </Link>
             <Button className="reg">注册</Button>
           </Addition>
         </HeaderWrapper>
